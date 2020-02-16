@@ -1,4 +1,4 @@
-# Refactoring Views With Helpers Lab
+ # Refactoring Views With Helpers Lab
 
 ## Objectives
 

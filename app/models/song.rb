@@ -2,10 +2,10 @@ class Song < ActiveRecord::Base
   belongs_to :artist
 
   def artist_name
-    self.artist.name.present? ? self.artist.name : nil
+    artist.name if artist # reads artist.name if artist is true
   end
 
   def artist_name=(name)
-    self.class.find_or_create_by(name: name)
+    self.artist = Artist.find_or_create_by(name: name)
   end
 end
